@@ -1,0 +1,318 @@
+@import "mixins";
+
+.home {
+  padding: 60px;
+  margin-top: 30px;
+
+  @media (max-width: 758px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 732px) {
+    padding: 18px;
+  }
+
+  .container {
+    width: 100%;
+    height: 512px;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    overflow: hidden;
+    background: linear-gradient(
+      188deg,
+      rgba(221, 123, 198, 0.35) -11.26%,
+      rgba(190, 76, 185, 0.24) 42.32%,
+      rgba(60, 3, 116, 0.18) 95.9%
+    );
+
+    @media (max-width: 768px) {
+      height: 500px;
+    }
+
+    @media (max-width: 632px) {
+      height: 400px;
+    }
+
+    .textContainer {
+      margin: 0 auto;
+      padding-left: 75px;
+
+      @media (max-width: 1146px) {
+        width: 100%;
+        padding: 0 60px;
+      }
+
+      @media (max-width: 532px) {
+        padding: 0 18px;
+      }
+
+      .heading-1 {
+        display: flex;
+        align-items: center;
+        gap: 36px;
+
+        @media (max-width: 1146px) {
+          width: 100%;
+          justify-content: space-between;
+          gap: 30px;
+        }
+
+        .infoBox {
+          border-radius: 30px;
+          border: 1px solid #fff;
+          background: #f1f1f7;
+          width: 241px;
+          height: 44px;
+          @include flex-styles;
+
+          @media (max-width: 532px) {
+            width: 163px;
+            height: 36px;
+          }
+
+          .infoText {
+            font-family: Manrope;
+            font-size: 16px;
+            font-weight: 400;
+
+            @media (max-width: 758px) {
+              font-size: 14px;
+            }
+
+            @media (max-width: 532px) {
+              font-size: 10px;
+            }
+          }
+        }
+        .ratingBox {
+          display: flex;
+
+          .personContainer {
+            display: flex;
+            align-items: center;
+            margin: 0 auto;
+            cursor: pointer;
+            .personAlign {
+              margin-left: -10px;
+            }
+          }
+
+          .ratingGroup {
+            margin-left: 6px;
+
+            .ratingText-main {
+              margin-top: -2px;
+              font-family: Manrope;
+              font-size: 12px;
+              font-weight: 500;
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+
+              @media (max-width: 758px) {
+                flex-direction: column;
+                align-items: flex-start;
+                font-size: 10px;
+              }
+
+              .leftText {
+                display: inline;
+              }
+
+              .rightText {
+                display: inline;
+              }
+            }
+          }
+        }
+      }
+
+      .hivText {
+        font-family: Manrope;
+        font-size: 45px;
+        font-style: normal;
+        line-height: normal;
+        margin-top: 15px;
+        font-weight: normal;
+
+        @media (max-width: 758px) {
+          font-size: 32px;
+        }
+
+        @media (max-width: 548px) {
+          font-size: 24px;
+        }
+
+        &-sub {
+          font-weight: 600;
+        }
+      }
+
+      .demandText {
+        width: 517px;
+        color: #2a353d;
+        font-family: Manrope;
+        font-size: 35px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 40px; /* 114.286% */
+        margin-top: 7px;
+        margin-bottom: 16px;
+
+        @media (max-width: 984px) {
+          width: 100%;
+        }
+
+        @media (max-width: 758px) {
+          font-size: 30px;
+          margin-top: 16px;
+        }
+
+        @media (max-width: 548px) {
+          font-size: 14px;
+        }
+      }
+
+      .description {
+        width: 638px;
+        height: 40px;
+        flex-shrink: 0;
+        font-family: Manrope;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        margin-bottom: 32px;
+
+        @media (max-width: 1270px) {
+          width: 500px;
+          margin-bottom: 40px;
+        }
+
+        @media (max-width: 1146px) {
+          width: 85%;
+        }
+
+        @media (max-width: 984px) {
+          width: 100%;
+        }
+
+        @media (max-width: 758px) {
+          margin-bottom: 40px;
+        }
+
+        @media (max-width: 532px) {
+          margin-bottom: 60px;
+        }
+      }
+
+      .buttonContainer {
+        .buyButton,
+        .recommendButton {
+          border-radius: 30px;
+          cursor: pointer;
+          border: none;
+        }
+        .buyButton {
+          width: 187px;
+          height: 50px;
+          flex-shrink: 0;
+          border-radius: 30px;
+          background: linear-gradient(85deg, #53078e 13.26%, #dd7bc6 95.33%);
+          margin-right: 23px;
+          color: #fff;
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+
+          @media (max-width: 758px) {
+            width: 180px;
+            height: 45px;
+          }
+
+          @media (max-width: 678px) {
+            width: 100px;
+            height: 33px;
+            margin-right: 10px;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: normal;
+          }
+        }
+        .recommendButton {
+          width: 271px;
+          height: 50px;
+          flex-shrink: 0;
+          background: #f2f2f2;
+          color: #000;
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: normal;
+
+          @media (max-width: 758px) {
+            width: 263px;
+            height: 45px;
+          }
+
+          @media (max-width: 678px) {
+            width: 180px;
+            height: 33px;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+          }
+
+          .arrowImage {
+            margin-left: 6px;
+          }
+        }
+      }
+    }
+
+    .imageContainer {
+      position: relative;
+      z-index: 100;
+      bottom: -1%;
+      height: 100%;
+      min-width: 432px;
+
+      @media (max-width: 1146px) {
+        display: none;
+      }
+
+      .jarImage {
+        z-index: 50;
+      }
+
+      .largeEclipse {
+        position: absolute;
+        right: 20%;
+        bottom: -13%;
+        width: 323px;
+        height: 323px;
+        border: 1px solid #fff;
+        border-radius: 100%;
+        background: rgba(255, 255, 255, 0.3);
+      }
+
+      .smallEllipse {
+        position: absolute;
+        right: 5%;
+        top: 26%;
+        width: 144px;
+        height: 144px;
+        border: 1px solid #fff;
+        border-radius: 100%;
+        background: rgba(255, 255, 255, 0.3);
+      }
+    }
+  }
+}

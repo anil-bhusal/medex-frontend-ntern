@@ -1,0 +1,27 @@
+{
+  "name": "medex-frontend-intern",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "framer-motion": "^11.2.10",
+    "next": "14.2.3",
+    "react": "^18",
+    "react-dom": "^18.3.1",
+    "react-icons": "^5.2.1",
+    "react-intersection-observer": "^9.10.3",
+    "sass": "^1.77.4"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "postcss": "^8",
+    "typescript": "^5"
+  }
+}

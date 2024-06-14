@@ -1,0 +1,306 @@
+@import "mixins";
+
+.pricing {
+  margin-left: calc(100% - 100vw) / 2;
+  width: 100vw;
+  padding: 0 8%;
+  margin-top: 80px;
+  height: 1267px;
+  background: linear-gradient(180deg, #eef0f4 0%, #f5effb 100%);
+
+  @media (max-width: 1400px) {
+    padding: 0 6%;
+  }
+
+  @media (max-width: 1024px) {
+    padding: 0 2%;
+  }
+
+  @media (max-width: 768px) {
+    padding: 0 6%;
+  }
+
+  .text-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @media (max-width: 768px) {
+      align-items: flex-start;
+      padding: 0 10px;
+    }
+
+    .heading {
+      margin-top: 70px;
+      text-align: center;
+      color: #2a353d;
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      text-transform: capitalize;
+      margin-bottom: 20px;
+
+      @media (max-width: 706px) {
+        text-align: left;
+      }
+    }
+
+    .description {
+      width: 556px;
+      color: #2a353d;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: normal;
+      text-align: center;
+
+      @media (max-width: 706px) {
+        width: 100%;
+        text-align: left;
+      }
+
+      @media (max-width: 532px) {
+        font-size: 12px;
+      }
+    }
+  }
+
+  .active-btn-container {
+    display: none;
+
+    @media (max-width: 768px) {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+      gap: 10px;
+    }
+
+    button {
+      border-radius: 30px;
+      border: 1px solid #fff;
+      background: #f1f1f7;
+      padding: 10px 30px;
+      cursor: pointer;
+
+      &.active {
+        background-color: #d9e9fa;
+      }
+    }
+  }
+
+  .cards-container {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 120px;
+
+    @media (max-width: 768px) {
+      margin-top: 90px;
+    }
+
+    .card {
+      max-width: 387px;
+      padding: 19px 18px 33px 18px;
+      border-radius: 30px;
+      background: rgba(255, 255, 255, 0.91);
+      backdrop-filter: blur(25.649999618530273px);
+      transition: transform 0.3s ease-in-out;
+      cursor: pointer;
+      display: block;
+
+      &.active {
+        box-shadow: 0px 8px 30px 0px rgba(0, 0, 0, 0.08);
+        margin-top: -70px;
+      }
+
+      @media (max-width: 1300px) {
+        max-width: 320px;
+      }
+
+      @media (max-width: 1132px) {
+        max-width: 290px;
+        padding: 19px 12px 33px 12px;
+      }
+
+      @media (max-width: 1024px) {
+        max-width: 260px;
+        padding: 19px 12px 33px 12px;
+      }
+
+      @media (max-width: 768px) {
+        max-width: 387px;
+        padding: 19px 18px 33px 18px;
+        display: none;
+
+        &.active {
+          display: block;
+        }
+      }
+
+      &:hover {
+        box-shadow: 0px 8px 40px 0px rgba(0, 0, 0, 0.08);
+      }
+
+      .choose-plan-btn {
+        &.secondary-btn {
+          background: linear-gradient(85deg, #53078e 13.26%, #dd7bc6 95.33%);
+          border: none;
+        }
+      }
+    }
+
+    .info-box {
+      margin: 27px 0;
+      padding: 32px;
+      border-radius: 30px;
+      background: linear-gradient(180deg, #eef0f4 0%, #f5effb 100%);
+      position: relative;
+
+      @media (max-width: 1304px) {
+        padding: 20px;
+      }
+
+      @media (max-width: 1032px) {
+        padding: 20px 12px;
+      }
+
+      @media (max-width: 768px) {
+        padding: 32px;
+      }
+
+      .svg-container {
+        @include flex-styles;
+
+        width: 112px;
+        height: 44px;
+        border-radius: 30px;
+        border: 1px solid #fff;
+        background: #f1f1f7;
+        position: absolute;
+        left: 50%;
+        top: -9%;
+        transform: translate(-50%);
+
+        @media (max-width: 1032px) {
+          width: 90px;
+          height: 36px;
+          font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+          width: 112px;
+          height: 44px;
+          font-size: 16px;
+        }
+
+        .svg-ellipse {
+          display: flex;
+          align-items: center;
+        }
+
+        .fireSVG {
+          margin-right: 6px;
+        }
+      }
+
+      &-heading {
+        color: #1a2430;
+        font-size: 26px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 33px;
+        margin-bottom: 13px;
+
+        @media (max-width: 1032px) {
+          font-size: 20px;
+          line-height: 26px;
+          margin-bottom: 5px;
+        }
+
+        @media (max-width: 768px) {
+          font-size: 26px;
+          line-height: 33px;
+        }
+      }
+
+      &-description {
+        color: #2a353d;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 7px;
+      }
+
+      &-subDescription {
+        height: 29px;
+        color: #2a353d;
+        font-size: 12px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        margin-bottom: 13px;
+      }
+    }
+
+    .package-list {
+      margin-bottom: 70px;
+
+      .pricing-header {
+        color: #2a353d;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        margin-bottom: 21px;
+      }
+
+      .package-item {
+        color: #333846;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: normal;
+        display: flex;
+        align-items: center;
+        margin-bottom: 12px;
+
+        .check-svg {
+          margin-right: 15px;
+          max-width: 24px;
+
+          @media (max-width: 1032px) {
+            min-width: 20px;
+            margin-right: 12px;
+          }
+        }
+      }
+    }
+
+    .btn-container {
+      margin: 0 auto;
+
+      .choose-plan-btn {
+        width: 100%;
+        height: 59px;
+        border-radius: 30px;
+        background: rgba(255, 255, 255, 0.91);
+        backdrop-filter: blur(25.649999618530273px);
+        color: #2a353d;
+        text-align: center;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        cursor: pointer;
+        border: 1px solid black;
+
+        &:hover {
+          background: linear-gradient(85deg, #53078e 13.26%, #dd7bc6 95.33%);
+          border: none;
+        }
+      }
+    }
+  }
+}
