@@ -1,8 +1,8 @@
 @import "mixins";
 
 .pricing {
-  margin-left: calc(100% - 100vw) / 2;
   width: 100vw;
+  margin-left: calc((100% - 100vw) / 2);
   padding: 0 8%;
   margin-top: 80px;
   height: 1267px;
